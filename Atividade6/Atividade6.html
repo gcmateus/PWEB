@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pedra, Papel ou Tesoura</title>
+</head>
+
+<body>
+    <script>
+        var escolha_user = prompt(`Digite sua escolha, pedra, papel ou tesoura?`)
+        
+        function gera_opcao_computador() {
+            escolha = Math.random()
+            if (escolha <= 0.33) {
+                return 'pedra'
+            } else{
+                if (escolha <= 0.66) {
+                return 'tesoura'
+                } else {
+                    return 'papel'
+                }    
+            }
+        }
+
+        function confronta(user){
+            var pc = gera_opcao_computador()
+            
+            if (user == pc) {
+                return ('Você escolheu: ' + user + 
+                    '\nO PC escolheu: ' + pc + 
+                    '\nResultado: Empate!')                
+            } else{
+                if (user == 'pedra' & pc == 'tesoura') {
+                    return ('Você escolheu: ' + user + 
+                    '\nO PC escolheu: ' + pc + 
+                    '\nResultado: Ganhou!')               
+                } else{
+                    if (user == 'tesoura' & pc == 'papel') {
+                        return ('Você escolheu: ' + user + 
+                        '\nO PC escolheu: ' + pc + 
+                        '\nResultado: Ganhou!')                 
+                    } else{
+                        if (user == 'papel' & pc == 'pedra') {
+                            return ('Você escolheu: ' + user + 
+                            '\nO PC escolheu: ' + pc + 
+                            '\nResultado: Ganhou!')                
+                        } else{
+                            return ('Você escolheu: ' + user + 
+                                '\nO PC escolheu: ' + pc + 
+                                '\nResultado: Perdeu!')
+                        }
+                    }
+                }
+            }            
+        }
+
+        alert(confronta(escolha_user));
+    </script>
+</body>
+
+</html>
