@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9 - 1</title>
+</head>
+<body>
+
+    <script>    
+        function retangulo(x, y){
+            this.x = x;
+            this.y = y;
+        }
+
+        function calculaArea(retangulo){
+            area = retangulo.x * retangulo.y;
+            return alert(`A área é: ${area}`);
+        }    
+
+        x = prompt('Digite um valor para x');
+        y = prompt('Digite um valor para y');
+
+        objRetangulo = new retangulo(x, y);
+
+        calculaArea(objRetangulo);
+   
+
+ 
+    </script>
+
+</body>
+</html>

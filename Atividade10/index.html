@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+
+    <script>
+		function OnClick() {
+            foto = document.getElementById("janela");
+            foto.src = "quebrada.jpg"
+
+        }
+        
+        function OnMouseOver() {
+            foto = document.getElementById("janela");
+            foto.src = "fechada.jpg"
+        }
+
+        function OnMouseOut() {
+            foto = document.getElementById("janela");
+            foto.src = "aberta.jpg"
+        }
+    </script>
+    
+</head>
+<body>
+
+    	<img id="janela" src="aberta.jpg" onclick="OnClick()" onmouseover="OnMouseOver()" onmouseout="OnMouseOut()"/> 
+	    
+</body>
+</html>
