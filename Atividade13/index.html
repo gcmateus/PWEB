@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt‐BR">
+
+<head>
+    <meta charset="UTF‐8" />
+    <title>Atividade 13</title>
+    
+    <script>
+      
+        function solicitaConfirmacao(value){
+            resposta = confirm('Deseja mesmo abrir a janela do curso?')
+ 
+            if (resposta) {
+                abreJanela(value)
+            } 
+        }
+
+        function abreJanela(value) {
+            
+            // nome janela, url, propriedade name, medidas
+            switch (value) {
+                case 'ads':
+                    novaJanela = window.open("http://www.fatecsorocaba.edu.br/curso_ads.asp", "janela1", "width = 800, height = 800");
+                    break;
+                case 'poli':
+                    novaJanela = window.open("http://www.fatecsorocaba.edu.br/curso_pol.asp", "janela1", "width = 800, height = 800");
+                    break;
+                case 'logi': 
+                    novaJanela = window.open("http://www.fatecsorocaba.edu.br/curso_log.asp", "janela1", "width = 800, height = 800");
+                    break;
+                case 'fabM': 
+                    novaJanela = window.open("http://www.fatecsorocaba.edu.br/curso_fm.asp", "janela1", "width = 800, height = 800");
+                    break;    
+                default:
+                    alert("ERRO!")
+                    break;
+            }
+            
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+    <h4> Escolha o curso </h4>
+    <select name="curso" onchange="solicitaConfirmacao(value)">
+        <option value=""></option>
+        <option value="ads">ADS</option>
+        <option value="poli">Polimeros</option>
+        <option value="logi">Logistica</option>
+        <option value="fabM">Fabricação</option>
+    </select>
+    </form>
+
+
+
+</body>
+
+</html>

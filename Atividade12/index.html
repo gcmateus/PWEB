@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <title>Formulário Principal</title>
+</head>
+
+<body>
+    <form method="post" onsubmit="validar()" name="pesquisa">
+        <h4>Nome : 
+            <input type="text" name="nome" size="50" maxlength="50" autofocus>
+        </h4>        
+
+        <h4>Email :
+            <input type="text" name="email" size="50" maxlength="50" autofocus>
+        </h4>
+        
+        <br>
+        <div>
+            <h3>Pesquisa:</h3>
+            <h3> Primeira vez nesta página?</h3>
+            <input TYPE="RADIO" NAME="radioPesquisa" VALUE="sim"> Sim
+            <input TYPE="RADIO" NAME="radioPesquisa" VALUE="nao"> Não
+            <br>
+            <br>
+            <h4><b>Comentario:</b></h4>
+            <textarea name="comentario" rows="10" cols="100">
+            </textarea>
+        </div>
+            <input TYPE="reset" VALUE="Limpar">
+            <input TYPE="submit" VALUE="Gravar">
+    </form>
+
+    <script type="text/javascript" src="index.js"></script>
+    
+    </script>
+</body>
+
+</html>
